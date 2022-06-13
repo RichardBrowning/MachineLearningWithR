@@ -8,9 +8,8 @@ pvalues=function(p0,phatstar,n,N){
 #####
 #Distribution
 #####
-# 1. Binomial?
+# 1. Binomial/Bernoulli
 # 2. Proportion of head?
-
 #coin.experiment <- sample(c(0,1), 50, replace = TRUE, prob = c(0.6, 0.4))
 #given sample
 results <- c(0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0)
@@ -29,7 +28,7 @@ summary(results)#five number summary
 barplot(freq.table, main = "Distribution", xlab = "Values", ylab = "probability")
 boxplot(freq.table)
 
-pvalues(0.4,0.16,50,10000)
+pvalues(0.4,0.16,50,1000)
 # Should we reject John’s claim that p = 0.4?
 # How strong is the evidence provided by the data for the rejection?
 # What are the possible fairness values, i.e., proportion to have Heads?
