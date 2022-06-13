@@ -61,11 +61,11 @@ subset(pp, pvalue_collection >= 0.05)
 intuition_collection=rep(0,101) 
 for (i in 1:101){
   if(abs(0.16-pp[i]) <= 2*sqrt(pp[i]*(1-pp[i])/50)){
-    print(pp[i])
+    # print(pp[i]) # Debug line
     intuition_collection[i] <- pp[i]
   }
 }
-intuition_collection <- subset(intuition_collection, intuition_collection != 0)
+subset(intuition_collection, intuition_collection != 0)
 
 
 ########
